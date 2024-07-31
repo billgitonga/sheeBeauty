@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Shee Beauty - Enhances Your Radiance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z4G4fA7+7DXt2iCqR5G41K51PFh2YRU7cRuQ17rVV6cFl22a4E4a40551E46491a62d65025f1d04/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Oswald";
+        }
+
+        body {
+            font-family: "Open Sans";
+        }
+
+        .w3-image {
+            opacity: 0.9;
+        }
+
+        .w3-hover-opacity:hover {
+            opacity: 1;
+        }
+
+        #booking-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            animation: fadeIn 0.3s;
+        }
+
+        .overlay-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .service-box {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            background-color: whitesmoke !important;
+            color: black !important;
+        }
+
+        .service-box i {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body class="w3-black">
+    <div class="w3-bar w3-black w3-hide-small">
+        <a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="w3-bar-item w3-button"><i class="fa-brands fa-snapchat"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-right"><i class="fa fa-search"></i></a>
+    </div>
+
+    <header class="w3-container w3-center w3-padding-48 w3-white">
+        <h1 class="w3-jumbo w3-tag"><b>Shee</b></h1>
+        <h1 class="w3-xxxlarge w3-text-black w3-hide-small"><b>BEAUTY PALACE</b></h1>
+        <h6>Enhances Your <span class="w3-tag">Radiance</span></h6>
+        <h6 id="date"></h6>
+    </header>
+
+    <div class="w3-content" style="max-width:1600px">
+        <header class="w3-display-container w3-wide" id="home">
+            <img class="w3-image w3-hover-opacity" src="makeup.jpg" alt="Beauty Salon" width="1600" height="1060">
+            <div class="w3-display-left w3-padding-large">
+                <h1 class="w3-text-white">Shee</h1>
+                <h1 class="w3-jumbo w3-text-white w3-hide-small"><b>BEAUTY PALACE</b></h1>
+                <h6><button id="booking-button" class="w3-opacity w3-hover-opacity-off" onclick="toggleBookingOverlay()">BOOK SESSION</button></h6>
+            </div>
+        </header>
+
+        <main>
+            <p>Book your session today and experience the magic of Shee Beauty Palace.</p>
+            <p>Discover the power of Shee Beauty Palace and experience the magic of a natural beauty transformation.</p>
+            <p>Contact us at <a href="mailto:info@sheebeautypalace.com">info@sheebeautypalace.com</a> or call <a href="tel:0123456789">012 345 6789</a> to book your session today.</p>
+            <p>We are open from 9 am to 7 pm, Monday to Friday and Saturday to Sunday.</p>
+
+            <div class="w3-container w3-center w3-padding-64" id="services">
+                <h2><b>Our Services</b></h2>
+                <p>Indulge in a world of pure pampering as our skilled artisans enhance your natural beauty. From flawless skin to sculpted features, our customized treatments deliver extraordinary results all at the comfort of your home.</p>
+
+                <div class="w3-row">
+                    <div class="w3-col l4">
+                        <div class="service-box">
+                            <i class="fa fa-face-smile"></i>
+                            <h3>Facial Treatments</h3>
+                            <p>Experience the ultimate skin rejuvenation.</p>
+                        </div>
+                    </div>
+                    <div class="w3-col l4">
+                        <div class="service-box">
+                            <i class="fa fa-scissors"></i>
+                            <h3>Hair Styling</h3>
+                            <p>Transform your look with our expert hairstylists.</p>
+                        </div>
+                    </div>
+                    <div class="w3-col l4">
+                        <div class="service-box">
+                            <i class="fa fa-paint-brush"></i>
+                            <h3>Makeup Artistry</h3>
+                            <p>Create your desired look for any occasion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w3-row">
+                    <div class="w3-col l4">
+                        <div class="service-box">
+                            <i class="fa fa-heart"></i>
+                            <h3>Massage Therapy</h3>
+                            <p>Unwind and relax with our soothing massages.</p>
+                        </div>
+                    </div>
+                    <div class="w3-col l4">
+                        <div class="service-box">
+                            <i class="fa fa-hands"></i>
+                            <h3>Nail Care</h3>
+                            <p>Pamper your hands and feet with luxurious treatments.</p>
+                        </div>
+                    </div>
+                    <div class="w3-col l4">
+                        <div class="service-box">
+                            <i class="fa fa-soap"></i>
+                            <h3>Body Treatments</h3>
+                            <p>Indulge in body scrubs, wraps, and more.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p>Discover the world of Shee Beauty Salon, where you'll find a smile that's worth every smile you've ever received. Book a session today and let our skilled artisans take care of your skin and enhance your natural beauty.</p>
+                <p><strong>Ready to book your appointment? Contact us today!</strong></p>
+                <a href="#contact" class="w3-button w3-white">Book Now</a>
+                <hr>
+                <div class="w3-white w3-margin">
+                    <div class="w3-container w3-padding w3-white">
+                        <h4>Follow Us</h4>
+                    </div>
+                    <div class="w3-container w3-xlarge w3-padding w3-black">
+                        <i class="fa-brands fa-facebook w3-hover-opacity"></i>
+                        <i class="fa-brands fa-instagram w3-hover-opacity"></i>
+                        <i class="fa-brands fa-snapchat w3-hover-opacity"></i>
+                    </div>
+                </div>
+
+                <hr>
+
+                <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+                <div class="w3-container w3-padding-64 w3-center">
+                    <h3>Contact Us</h3>
+                    <p><i class="fa fa-map-marker-alt"></i> Nairobi, Kenya.</p>
+                    <p><i class="fa fa-envelope"></i> info@sheebeautypalace.com</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="w3-container w3-dark-grey" style="padding:32px">
+                <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Gitonga</a></p>
+            </footer>
+
+        <script>
+            function displayDate() {
+                const today = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = today.toLocaleDateString('en-US', options);
+                document.getElementById('date').textContent = formattedDate;
+            }
+
+            displayDate();
+            setInterval(displayDate, 1000);
+
+            function toggleBookingOverlay() {
+                const bookingOverlay = document.getElementById('booking-overlay');
+                bookingOverlay.style.display = bookingOverlay.style.display === 'block' ? 'none' : 'block';
+            }
+            const bookingForm = document.getElementById('booking-form');
+            bookingForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = bookingForm.elements['name'].value;
+                const email = bookingForm.elements['email'].value;
+                const phone = bookingForm.elements['phone'].value;
+                confirm(name, email, phone);
+            });
+            
+            function confirm(name, email, phone) {
+                const confirmation = window.confirm(`Book a session with ${name} at ${new Date().toLocaleTimeString()}?\nEmail: ${email}\nPhone: ${phone}`);
+                if (confirmation) {
+                    alert('Your booking has been confirmed. You will receive a confirmation email shortly.');
+                }
+            }
+            const bookingCloseButton = document.getElementById('booking-close');
+            bookingCloseButton.addEventListener('click', function() {
+                toggleBookingOverlay();
+            });
+            const bookingOverlay = document.getElementById('booking-overlay');
+            window.addEventListener('click', function(event) {
+                if (event.target === bookingOverlay) {
+                    toggleBookingOverlay();
+                }
+            });
+            const bookingInput = document.getElementById('booking-input');
+            bookingInput.addEventListener('input', function() {
+                const name = bookingForm.elements['name'].value;
+                const email = bookingForm.elements['email'].value;
+                const phone = bookingForm.elements['phone'].value;
+                const submitButton = bookingForm.elements['submit'];
+                submitButton.disabled = name.trim() === '' || email.trim() === '' || phone.trim() === '';
+            });
+            const modal = document.getElementById('booking-modal');
+            const btn = document.getElementById('booking-button');
+            const span = document.getElementsByClassName("close")[0];
+            btn.onclick = function(){
+                modal.style.display = "block";
+            }
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            btn.onclick = function(){
+                var name = document.getElementsByClassName("name");
+                var tel = document.getElementsByClassName("tel");
+                let message = ("Thank You ", $name, "You will recieve a call within 24Hrs");
+                alert(message);
+            }
+            const contactForm = document.getElementById('contact-form');
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = contactForm.elements['name'].value;
+                const email = contactForm.elements['email'].value;
+                const message = contactForm.elements['message'].value;
+                confirm(name, email, message);
+            });
+
+            function confirm(name, email, message) {
+                const confirmation = window.confirm(`Send a message to ${name} at ${new Date().toLocaleTimeString()}?\nEmail: ${email}\nMessage: ${message}`);
+                if (confirmation) {
+                    alert('Your message has been sent. We will get back to you shortly.');
+                }
+            }
+
+            const contactCloseButton = document.getElementById('contact-close');
+            contactCloseButton.addEventListener('click', function() {
+                toggleContactOverlay();
+            });
+            const contactOverlay = document.getElementById('contact-overlay');
+            window.addEventListener('click', function(event) {
+                if (event.target === contactOverlay) {
+                    toggleContactOverlay();
+                }
+            });
+            const contactInput = document.getElementById('contact-input');
+            contactInput.addEventListener('input', function() {
+                const name = contactForm.elements['name'].value;
+                const email = contactForm.elements['email'].value;
+                const message = contactForm.elements['message'].value;
+                const submitButton = contactForm.elements['submit'];
+                submitButton.disabled = name.trim() === '' || email.trim() === '' || message.trim() === '';
+            });
+            const contactModal = document.getElementById('contact-modal');
+            const contactBtn = document.getElementById('contact-button');
+            const contactSpan = document.getElementsByClassName("close")[0];
+            contactBtn.onclick = function(){
+                contactModal.style.display = "block";
+            }
+            contactSpan.onclick = function() {
+                contactModal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == contactModal) {
+                    contactModal.style.display = "none";
+                }
+            }
+            contactBtn.onclick = function(){
+                var name = document.getElementsByClassName("name");
+                var email = document.getElementsByClassName("email");
+                var message = document.getElementsByClassName("message");
+                let message = ("Thank You ", $name, "You will recieve a call within 24Hrs");
+                alert(message);
+            }
+            const aboutForm = document.getElementById('about-form');
+            aboutForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = aboutForm.elements['name'].value;
+                const email = aboutForm.elements['email'].value;
+                const message = aboutForm.elements['message'].value;
+                confirm(name, email, message);
+            });
+            function confirm(name, email, message) {
+                const confirmation = window.confirm(`Send a message to ${name} at ${new Date().toLocaleTimeString()}?\nEmail: ${email}\nMessage: ${message}`);
+                if (confirmation) {
+                    alert('Your message has been sent. We will get back to you shortly.');
+                }
+            }
+            const aboutCloseButton = document.getElementById('about-close');
+
+            aboutCloseButton.addEventListener('click', function() {
+                toggleAboutOverlay();
+            });
+            const aboutOverlay = document.getElementById('about-overlay');
+            window.addEventListener('click', function(event) {
+                if (event.target === aboutOverlay) {
+                    toggleAboutOverlay();
+                }
+            });
+            const aboutInput = document.getElementById('about-input');
+            aboutInput.addEventListener('input', function() {
+                const name = aboutForm.elements['name'].value;
+                const email = aboutForm.elements['email'].value;
+                const message = aboutForm.elements['message'].value;
+                const submitButton = aboutForm.elements['submit'];
+                submitButton.disabled = name.trim() === '' || email.trim() === '' || message.trim() === '';
+            });
+            const aboutModal = document.getElementById('about-modal');
+            const aboutBtn = document.getElementById('about-button');
+            const aboutSpan = document.getElementsByClassName("close")[0];
+            aboutBtn.onclick = function(){
+                aboutModal.style.display = "block";
+            }
+            aboutSpan.onclick = function() {
+                aboutModal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == aboutModal) {
+                    aboutModal.style.display = "none";
+                }
+            }
+            aboutBtn.onclick = function(){
+                var name = document.getElementsByClassName("name");
+                var email = document.getElementsByClassName("email");
+                var message = document.getElementsByClassName("message");
+                let message = ("Thank You ", $name, "You will recieve a call within 24Hrs");
+                alert(message);
+            }
+            function toggleBookingOverlay() {
+                const bookingOverlay = document.getElementById('booking-overlay');
+                bookingOverlay.classList.toggle('active');
+            }
+            function toggleContactOverlay() {
+                const contactOverlay = document.getElementById('contact-overlay');
+                contactOverlay.classList.toggle('active');
+            }
+            function toggleAboutOverlay() {
+                const aboutOverlay = document.getElementById('about-overlay');
+                aboutOverlay.classList.toggle('active');
+            }
+            function openDropdown() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    const dropdowns = document.getElementsByClassName("dropdown-content");
+                    let i;
+                    for (i = 0; i < dropdowns.length; i++) {
+                        const openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            }
+            let slideIndex = 0;
+            showSlides();
+            function showSlides() {
+                let i;
+                const slides = document.getElementsByClassName("mySlides");
+                const dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+            const contactForm = document.getElementById('contact-form');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                const name = contactForm.elements['name'].value;
+                const email = contactForm.elements['email'].value;
+                const message = contactForm.elements['message'].value;
+                confirm(name, email, message);
+            });
+
+        </script>
+    </body>
+</html>
